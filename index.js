@@ -1,15 +1,24 @@
+// Load dotenv
+import 'dotenv/config'
+
 import { Pool } from 'pg';
 import { faker } from '@faker-js/faker';
 import { format } from 'date-fns';
 
+// If the environment variable is not set, print error and stop the script
+if (!process.env.DB_USER || !process.env.DB_HOST || !process.env.DB_NAME || !process.env.DB_PASS || !process.env.DB_PORT) {
+  console.error('Database configuration is missing. Please set the environment variables.');
+  console.log('Copy the `.env.example` file to `.env`. Update the new `.env` file using correct values for this environment');
+  process.exit(1);
+}
 
 // Database configuration
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'medical_records_db',
-  password: 'your_password',
-  port: 5432,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASS,
+  port: process.env.DB_PORT,
 });
 
 // Constants for data generation

@@ -45,6 +45,18 @@ env/
 venv/
 .venv/
 
+# Ignore dotenvfiles
+!.env.example
+.env
+.env.local
+.env.development
+.env.production
+
+# Ignore specific directories
+node_modules/
+build/
+dist
+
 # Ignore version control metadata
 .git/
 
