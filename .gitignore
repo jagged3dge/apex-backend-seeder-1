@@ -1,0 +1,69 @@
+# Ignore compiled source files
+*.o
+*.obj
+
+# Ignore build artifacts
+bin/
+dist/
+
+# Ignore IDE-specific files
+.project
+.idea/
+.vscode/
+
+# Ignore configuration files
+config/
+settings/
+
+# Ignore log files
+logs/
+debug.log
+
+# Ignore test files
+test/
+unittests/
+fixtures/
+
+# Ignore documentation files
+docs/
+manual/
+
+# Ignore temporary files
+tmp/
+temp/
+
+# Ignore cache files
+cache/
+.cache/
+
+# Ignore other generated files
+*.~*
+*~
+
+# Ignore environment-specific files
+env/
+venv/
+.venv/
+
+# Ignore version control metadata
+.git/
+
+# Ignore specific file types
+*.swp  # Vim swap files
+*.pyc   # Python bytecode
+*.pyo   # Optimized Python bytecode
+*.class # Java class files
+*.jar  # JAR archives
+*.war  # WAR archives
+*.ear  # EAR archives
+*.zip  # ZIP archives
+*.tar.gz # Tarballs compressed with gzip
+*.tgz    # Tarballs compressed with gzip
+*.tar.bz2 # Tarballs compressed with bzip2
+*.tbz2   # Tarballs compressed with bzip2
+*.rar   # RAR archives
+
+# Ignore specific directories
+node_modules/
+
+npm-debug.log
